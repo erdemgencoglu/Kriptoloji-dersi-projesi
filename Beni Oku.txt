@@ -1,0 +1,98 @@
+Erdem Gençoğlu
+12253030 
+
+------------------------------------------------PROJE 1-----------------------------------------------
+Kriptoloji Dersi Python Menu uygulaması
+
+Kullanılan python kütüphaneleri
+
+os:console ekranını temizlemek için kullanılmıştır
+platform:cihazın işletim sistemini tespit etmek için kullanıldı (clear komutu farklılık gösteriyor sisteme göre)
+
+Arayüz:
+
+------------- ANA MENU -------------
+1. Sifremeleme algoritmalari
+2. Sifre cozumleme
+3. Kriptoloji tarihi
+4. Ileri seviye kriptoloji
+5. Cikis
+------------------------------------
+Seciminizi yapiniz [1-5]:
+
+---Çalışma Prensibi---
+1-Ana menüde 1 ile 5 arasında bir seçim yapılabilir.Burada seçim
+karakter(string) şeklinde girilirse kullanıcıdan tekrar seçim 
+yapılması istenir.
+2-Seçilen kategoriler alt menulere sahiptirler
+
+Alt menu örneği:
+
+----- Sifremeleme algoritmalari -----
+1. Caesar Cipher
+2. Atbash Cipher
+3. Keyword Cipher
+4. Ana menuye don
+
+3-Alt menulerden ana menuye dönüş yapılabilir veya istenilen alt kategori seçilebilir
+4-Alt kategorilerden de bir önceki alt menu kısmına dönüş yapılabilmektedir
+5-Şimdilik menu içerikleri boştur ilerleyen zamanlarda doldurulacaktır.
+
+------------------------------------------------PROJE 3-----------------------------------------------
+Kriptoloji Dersi Simetrik Şifreleme
+
+Arayüz:
+
+------------- ANA MENU -------------
+1. Proje 2
+2. Proje 3
+3. Menu 3
+4. Menu 4
+5. Cikis
+------------------------------------
+Seciminizi yapiniz [1-5]:
+
+---Çalışma Prensibi---
+Ana menüden Proje 3 yi seçiniz ve açılan alt menuden
+
+-Proje 3 seçtikten sonra şifreli metni s_cikti.txt dosyasından görebilirsiniz.
+-Şifreleme işleminden önce anahtarı değiştirmek isterseniz key.txt dosyasından değiştirebilirsiniz.
+-Şifreleme işleminden sonra çözümlemek için bir önceki menuden metnin çözümü seçeneğine giriniz.
+-Eğer girmiş olduğunuz key ile çözüm keyi aynı ise çözum düzgün bir şekilde gözükecektir.
+-Çözüm keyine cozum_key.txt dosyasından erişilebilir ve değiştirilebilir.
+-Keyler farklı ise sonuc anlamsız bir metin olarak çıkacaktır.
+
+Not:Projede Crypto.Cipher kütüphanesinden AES sifreleme kullanılmıştır.Şifrelenen ve çözümlenen
+(farklı çözümkey verilmişse) metinlerde sembollerde gözükmekte sadece karakter ayarını bulamadım.
+
+Kullanılan keyler
+------------------
+şifreleme key i=tatlı
+çözüm key i=tatlı
+plaintext= Bu ödev kriptoloji dersi için yapılmıstır..
+
+------------------------------------------------PROJE 4-----------------------------------------------
+Kullanılan kütüphane: aead
+
+Arayüz:
+
+------------- ANA MENU -------------
+1. Proje 2
+2. Proje 3
+3. Proje 4
+4. Menu 4
+5. Cikis
+------------------------------------
+Açılan menüden Proje 4 ü seçiniz.
+-İlk önce Adım-1 seçmelisiniz.İletilen şifreli metin bütünlüğü için gereken ilk adım girdi.txt,key.txt dosyalarının
+okunup 100 defa hashlendikten sonra cikti.txt dosyasına yazdırılması gerekmektedir.Adım-1 bu işlemi yapmakta
+-İkinci olarak Adım-2 seçilmelidir.Bu kısımda hashli metin ve hashli keyin cikti.txt dosyasindan okunup bütünlük testi yapılmaktadır.
+
+Gözlemleme
+----------
+Yukarıdaki adımları yaptıktan sonra  düzmetnin(girdi.txt) içeriğini değiştirdirip Adım-2 seçilir.Düz metnin hashi değişeceğinden orjinal hash ile uyuşmayacaktır butunluk bozulmuş olucaktır.Aynısı key içinde geçerlidir. 
+Uyusmayan durumlarda hangi satırın uyusmadığı konsoldan gözlemlenebilir. 
+
+cikti.txt icerik
+----------------
+şifreli metin||hashli metin||hashli key
